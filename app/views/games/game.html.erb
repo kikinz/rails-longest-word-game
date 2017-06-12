@@ -1,0 +1,20 @@
+<h1>Welcome to the longest word-game</h1>
+<h2>Here is your grid</h2>
+<h3><%= @grid %></h3>
+
+<form action="/score">
+  <label for="answer">What's your best shot?</label>
+  <input type="text" id="answer" name="attempt">
+  <input type="hidden" name="grid">
+  <input type="text" name="start_time" value="<%= @start_time %>">
+  <input type="submit" value="Submit!">
+</form>
+
+<!--
+- display welcome (game view)
+- display grid (game view, logic from game controller)
+- asks for user input (game view, logic to game controller)
+- measures time (game controller)
+- calculates score (game controller)
+- display result to user (score view)
+-->
